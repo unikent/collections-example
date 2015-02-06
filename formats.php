@@ -32,7 +32,7 @@ if ($id > 0) {
     echo '<ul class="nav nav-pills nav-stacked" role="tablist">';
     $list = $api->get_images();
     foreach ($list as $image) {
-        echo '<li><a href="?id=' . $image . '">' . $image . '</a></li>';
+        echo '<li><a href="?id=' . $image . '">Image ' . $image . '</a></li>';
     }
     echo '</ul>';
 }

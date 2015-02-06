@@ -14,27 +14,23 @@ require_once(dirname(__FILE__) . '/config.php');
 $PAGE->set_url('/zoomify.php');
 $PAGE->set_title("SCAPI - Zoomify Demo");
 
-$id = optional_param('id', 0, PARAM_INT);
+$id = $PAGE->optional_param('id', 0);
 
 echo $OUTPUT->header();
 echo $OUTPUT->heading('SCAPI - Dynamic Zoomify Demo');
 
+$api = \unikent\SpecialCollections\API::create_dev('cartoons');
+
 if ($id > 0) {
+    $image = $api->get_image($id);
     echo "<ol class=\"breadcrumb\"><li><a href=\"/zoomify.php\">Zoomify</a></li><li>$id</li></ol>";
 
-    echo <<<HTML5
-    <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0" width="800" height="500" id="ZoomifyRotationViewer">
-        <param name="flashvars" value="zoomifyImagePath=../api/zoomify.php?request=$id">
-        <param name="menu" value="false">
-        <param name="src" value="../media/swf/ZoomifyRotationViewer.swf">
-        <embed flashvars="zoomifyImagePath=../api/zoomify.php?request=$id" src="../media/swf/ZoomifyRotationViewer.swf" menu="false" pluginspage="http://www.adobe.com/go/getflashplayer" type="application/x-shockwave-flash" width="800" height="500" name="ZoomifyRotationViewer"></embed>
-    </object>
-HTML5;
+    echo $image->render_zoomify();
 } else {
     echo '<ul class="nav nav-pills nav-stacked" role="tablist">';
-    $list = $DB->yield_records('files');
+    $list = $api->get_images();
     foreach ($list as $image) {
-        echo '<li><a href="?id=' . $image->id . '">' . $image->filename . '</a></li>';
+        echo '<li><a href="?id=' . $image . '">Image ' . $image . '</a></li>';
     }
     echo '</ul>';
 }
