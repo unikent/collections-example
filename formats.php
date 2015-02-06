@@ -14,22 +14,25 @@ require_once(dirname(__FILE__) . '/config.php');
 $PAGE->set_url('/formats.php');
 $PAGE->set_title("Dynamic Resize Demo");
 
-$id = optional_param('id', 0, PARAM_INT);
+$id = $PAGE->optional_param('id', 0);
 
 echo $OUTPUT->header();
 echo $OUTPUT->heading();
 
+$api = \unikent\SpecialCollections\API::create_dev('cartoons');
+
 if ($id > 0) {
+    $image = $api->get_image($id);
     echo "<ol class=\"breadcrumb\"><li><a href=\"/formats.php\">Formats</a></li><li>$id</li></ol>";
-    echo "<h3>Thumbnail</h3><img src=\"../api/image.php?id={$id}&size=thumb\" alt=\"Thumb Size\"><br /><br />";
-    echo "<h3>Standard</h3><img src=\"../api/image.php?id={$id}&size=standard\" alt=\"Standard Size\"><br /><br />";
-    echo "<h3>Print</h3><img src=\"../api/image.php?id={$id}&size=print\" alt=\"Print Size\"><br /><br />";
-    echo "<h3>Full</h3><img src=\"../api/image.php?id={$id}&size=full\" alt=\"Full Size\"><br /><br />";
+    echo "<h3>Thumbnail</h3><img src=\"" . $image->get_url('thumb') . "\" alt=\"Thumb Size\"><br /><br />";
+    echo "<h3>Standard</h3><img src=\"" . $image->get_url('standard') . "\" alt=\"Standard Size\"><br /><br />";
+    echo "<h3>Print</h3><img src=\"" . $image->get_url('print') . "\" alt=\"Print Size\"><br /><br />";
+    echo "<h3>Full</h3><img src=\"" . $image->get_url('full') . "\" alt=\"Full Size\"><br /><br />";
 } else {
     echo '<ul class="nav nav-pills nav-stacked" role="tablist">';
-    $list = $DB->yield_records('files');
+    $list = $api->get_images();
     foreach ($list as $image) {
-        echo '<li><a href="?id=' . $image->id . '">' . $image->filename . '</a></li>';
+        echo '<li><a href="?id=' . $image . '">' . $image . '</a></li>';
     }
     echo '</ul>';
 }

@@ -23,18 +23,6 @@ if ($id > 0) {
 
 echo $OUTPUT->header();
 echo $OUTPUT->heading('SCAPI - OpenLayers Demo');
-echo '<p>Note: this is not working yet.</p>';
-
-if ($id > 0) {
-    echo "<ol class=\"breadcrumb\"><li><a href=\"/openlayers.php\">OpenLayers</a></li><li>$id</li></ol>";
-    echo '<div id="imagebox" class="imagebox"></div>';
-} else {
-    echo '<ul class="nav nav-pills nav-stacked" role="tablist">';
-    $list = $DB->yield_records('files');
-    foreach ($list as $image) {
-        echo '<li><a href="?id=' . $image->id . '">' . $image->filename . '</a></li>';
-    }
-    echo '</ul>';
-}
+echo '<p>This is not working yet.</p>';
 
 echo $OUTPUT->footer();

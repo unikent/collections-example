@@ -8,11 +8,11 @@
 global $CFG;
 
 $CFG = new \stdClass();
-$CFG->brand = 'SpecialCollections';
+$CFG->brand = 'Special Collections';
 $CFG->dirroot = dirname(__FILE__);
 $CFG->cssroot = $CFG->dirroot . '/media/css';
 $CFG->jsroot = $CFG->dirroot . '/media/js';
-$CFG->wwwroot = 'http://collections-dev.kent.ac.uk:8080';
+$CFG->wwwroot = 'http://collections-example-dev.kent.ac.uk:8080';
 
 $CFG->developer_mode = true;
 

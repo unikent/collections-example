@@ -27,8 +27,8 @@ $PAGE->set_title($CFG->brand);
 // Setup navigation.
 $PAGE->menu(array(
     'Home' => '/index.php',
+    'Formats' => '/formats.php',
     'Zoomify' => '/zoomify.php',
     'OpenLayers' => '/openlayers.php',
-    'Formats' => '/formats.php',
     'Calm' => '/calm.php'
 ));
