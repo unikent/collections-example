@@ -17,10 +17,10 @@ $PAGE->set_title("Calm Data Explorer");
 echo $OUTPUT->header();
 echo $OUTPUT->heading();
 
-$tab = optional_param('tab', '', PARAM_ALPHA);
-$infield = optional_param('field', 'id', PARAM_ALPHAEXT);
-$invalue = optional_param('value', '', PARAM_RAW);
-$recordid = optional_param('recordid', '', PARAM_RAW);
+$tab = $PAGE->optional_param('tab', '');
+$infield = $PAGE->optional_param('field', 'id');
+$invalue = $PAGE->optional_param('value', '');
+$recordid = $PAGE->optional_param('recordid', '');
 
 $menu = array(
     '' => 'Home',

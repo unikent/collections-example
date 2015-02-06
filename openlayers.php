@@ -14,7 +14,7 @@ require_once(dirname(__FILE__) . '/config.php');
 $PAGE->set_url('/openlayers.php');
 $PAGE->set_title("SCAPI - OpenLayers Demo");
 
-$id = optional_param('id', 0, PARAM_INT);
+$id = $PAGE->optional_param('id', 0);
 if ($id > 0) {
     $PAGE->require_css('http://openlayers.org/en/v3.1.1/css/ol.css');
     $PAGE->require_js('http://openlayers.org/en/v3.1.1/build/ol.js');
