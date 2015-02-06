@@ -1,0 +1,225 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "cde155871c07a394dd1ded5b0cc877c5",
+    "packages": [
+        {
+            "name": "skylarkelty/rapid",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/SkylarKelty/Rapid.git",
+                "reference": "4067f5bb39a9aca4ab17d0482d1f2280b34dafe2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/SkylarKelty/Rapid/zipball/4067f5bb39a9aca4ab17d0482d1f2280b34dafe2",
+                "reference": "4067f5bb39a9aca4ab17d0482d1f2280b34dafe2",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.2.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Rapid\\": [
+                        "src/"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache License v2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Skylar Tristan Kelty",
+                    "email": "skylarkelty@gmail.com",
+                    "role": "lead"
+                }
+            ],
+            "description": "Rapid Prototyping Framework in PHP.",
+            "homepage": "https://github.com/SkylarKelty/Rapid",
+            "keywords": [
+                "framework"
+            ],
+            "time": "2015-02-02 13:37:58"
+        },
+        {
+            "name": "solarium/solarium",
+            "version": "3.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/solariumphp/solarium.git",
+                "reference": "a9d8a52ba9fd8add04b2294fad997a004c1f2fab"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/solariumphp/solarium/zipball/a9d8a52ba9fd8add04b2294fad997a004c1f2fab",
+                "reference": "a9d8a52ba9fd8add04b2294fad997a004c1f2fab",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2",
+                "symfony/event-dispatcher": "~2.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~3.7",
+                "satooshi/php-coveralls": "~0.6",
+                "squizlabs/php_codesniffer": "~1.4",
+                "zendframework/zendframework1": "~1.12"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-develop": "3.3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Solarium\\": "library/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "NewBSD"
+            ],
+            "authors": [
+                {
+                    "name": "See GitHub contributors",
+                    "homepage": "https://github.com/basdenooijer/solarium/contributors"
+                }
+            ],
+            "description": "PHP Solr client",
+            "homepage": "http://www.solarium-project.org",
+            "keywords": [
+                "php",
+                "search",
+                "solr"
+            ],
+            "time": "2014-11-12 06:53:41"
+        },
+        {
+            "name": "symfony/event-dispatcher",
+            "version": "v2.6.4",
+            "target-dir": "Symfony/Component/EventDispatcher",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/EventDispatcher.git",
+                "reference": "f75989f3ab2743a82fe0b03ded2598a2b1546813"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/EventDispatcher/zipball/f75989f3ab2743a82fe0b03ded2598a2b1546813",
+                "reference": "f75989f3ab2743a82fe0b03ded2598a2b1546813",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "psr/log": "~1.0",
+                "symfony/config": "~2.0,>=2.0.5",
+                "symfony/dependency-injection": "~2.6",
+                "symfony/expression-language": "~2.6",
+                "symfony/stopwatch": "~2.3"
+            },
+            "suggest": {
+                "symfony/dependency-injection": "",
+                "symfony/http-kernel": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.6-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\EventDispatcher\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                }
+            ],
+            "description": "Symfony EventDispatcher Component",
+            "homepage": "http://symfony.com",
+            "time": "2015-02-01 16:10:57"
+        },
+        {
+            "name": "unikent/lib-php-collections",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/unikent/lib-php-collections.git",
+                "reference": "fc725e6450f3d27f6a684f1568000b4471311c67"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/unikent/lib-php-collections/zipball/fc725e6450f3d27f6a684f1568000b4471311c67",
+                "reference": "fc725e6450f3d27f6a684f1568000b4471311c67",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3",
+                "solarium/solarium": "3.3.0"
+            },
+            "require-dev": {
+                "phpdocumentor/phpdocumentor": "2.7"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "unikent\\SpecialCollections\\": [
+                        "src/"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Skylar Tristan Kelty",
+                    "email": "s.kelty@kent.ac.uk",
+                    "role": "lead"
+                }
+            ],
+            "description": "Special Collections API for PHP.",
+            "homepage": "https://github.com/unikent/lib-php-collections",
+            "keywords": [
+                "api",
+                "library",
+                "special collections"
+            ],
+            "time": "2015-02-06 10:12:54"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "skylarkelty/rapid": 20,
+        "unikent/lib-php-collections": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

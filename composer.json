@@ -1,0 +1,6 @@
+{
+    "require": {
+        "skylarkelty/rapid": "dev-master",
+        "unikent/lib-php-collections": "dev-master"
+    }
+}
